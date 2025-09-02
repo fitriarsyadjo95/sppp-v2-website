@@ -15,7 +15,7 @@ export interface Page {
   id: string
   slug: string
   title: string
-  content: any
+  content: Record<string, unknown>
   excerpt?: string
   featuredImage?: string
   published: boolean
@@ -32,7 +32,7 @@ export interface Page {
 export interface NavigationItem {
   name: string
   href: string
-  icon?: any
+  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>
   description?: string
   subItems?: NavigationItem[]
   external?: boolean
@@ -69,7 +69,7 @@ export interface ChatMessage {
   sender: 'user' | 'bot'
   timestamp: Date
   type?: 'text' | 'link' | 'image'
-  metadata?: Record<string, any>
+  metadata?: Record<string, unknown>
 }
 
 export interface Service {

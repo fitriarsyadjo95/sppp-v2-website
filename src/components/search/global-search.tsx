@@ -3,7 +3,7 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { MagnifyingGlassIcon, ClockIcon, FireIcon } from '@heroicons/react/24/outline'
-import { cn, debounce } from '@/lib/utils'
+import { cn } from '@/lib/utils'
 import { SearchResult, SearchSuggestion } from '@/types'
 
 // Mock data - will be replaced with real API calls
@@ -77,7 +77,10 @@ export const GlobalSearch: React.FC = () => {
   }, [])
 
   const debouncedSearch = useCallback(
-    debounce((searchQuery: string) => performSearch(searchQuery), 300),
+    (searchQuery: string) => {
+      // Simple timeout-based debouncing
+      setTimeout(() => performSearch(searchQuery), 300)
+    },
     [performSearch]
   )
 
@@ -273,7 +276,7 @@ export const GlobalSearch: React.FC = () => {
           {/* No Results */}
           {query.length > 2 && !isLoading && suggestions.length === 0 && searchResults.length === 0 && (
             <div className="px-3 py-4 text-center text-sm text-sppp-gray">
-              Tiada hasil ditemui untuk "{query}"
+              Tiada hasil ditemui untuk &ldquo;{query}&rdquo;
             </div>
           )}
         </div>

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Popover, Transition } from '@headlessui/react'
@@ -9,8 +9,6 @@ import {
   BuildingOfficeIcon,
   TruckIcon,
   AcademicCapIcon,
-  NewspaperIcon,
-  PhoneIcon,
   UserGroupIcon,
   CogIcon,
   DocumentTextIcon,

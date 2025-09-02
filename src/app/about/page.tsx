@@ -1,5 +1,11 @@
 import React from 'react'
+import { Metadata } from 'next'
 import { Layout } from '@/components/layout/layout'
+
+export const metadata: Metadata = {
+  title: 'Profil Organisasi | SPPP',
+  description: 'Ketahui lebih lanjut tentang sejarah, visi, misi dan struktur organisasi Suruhanjaya Pelabuhan Pulau Pinang',
+}
 import { 
   BuildingOfficeIcon, 
   UserGroupIcon, 
@@ -10,10 +16,7 @@ import { Card, CardContent, CardTitle } from '@/components/ui/card'
 
 export default function AboutPage() {
   return (
-    <Layout 
-      title="Profil Organisasi SPPP"
-      description="Ketahui lebih lanjut tentang sejarah, visi, misi dan struktur organisasi Suruhanjaya Pelabuhan Pulau Pinang"
-    >
+    <Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-sppp-dark-blue to-sppp-blue py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

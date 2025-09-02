@@ -6,15 +6,11 @@ import { Footer } from './footer'
 import { BaseComponentProps } from '@/types'
 
 interface LayoutProps extends BaseComponentProps {
-  title?: string
-  description?: string
   showHeader?: boolean
   showFooter?: boolean
 }
 
 export const Layout: React.FC<LayoutProps> = ({
-  title,
-  description,
   showHeader = true,
   showFooter = true,
   className,
@@ -22,13 +18,6 @@ export const Layout: React.FC<LayoutProps> = ({
 }) => {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Page Title and Description for SEO */}
-      {title && (
-        <head>
-          <title>{title} | SPPP</title>
-          {description && <meta name="description" content={description} />}
-        </head>
-      )}
 
       {/* Header */}
       {showHeader && <Header />}
