@@ -1,0 +1,18 @@
+{
+  "phase1": {
+    "name": "Critical Navigation Pages",
+    "pages": []
+  },
+  "phase2": {
+    "name": "Service & Feature Pages",
+    "pages": []
+  },
+  "phase3": {
+    "name": "Legal & Information Pages",
+    "pages": []
+  },
+  "phase4": {
+    "name": "Portal & Interactive Pages",
+    "pages": []
+  }
+}

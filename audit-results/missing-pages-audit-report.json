@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "totalPagesRequired": 42,
+    "accessiblePages": 0,
+    "missingPages": 0,
+    "completionRate": "0.0%",
+    "criticalMissing": 0,
+    "highMissing": 0,
+    "mediumMissing": 0,
+    "lowMissing": 0
+  },
+  "developmentPlan": {
+    "phase1_critical": {
+      "description": "Critical navigation pages - must be developed first",
+      "pages": []
+    },
+    "phase2_high": {
+      "description": "High priority service and feature pages",
+      "pages": []
+    },
+    "phase3_medium": {
+      "description": "Medium priority information and resource pages",
+      "pages": []
+    },
+    "phase4_low": {
+      "description": "Low priority additional functionality",
+      "pages": []
+    }
+  },
+  "accessiblePages": [],
+  "detailedResults": [],
+  "timestamp": "2025-09-02T14:12:00.253Z"
+}
