@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SPPP v2 Website
 
-## Getting Started
+Modern, responsive website for **Suruhanjaya Pelabuhan Pulau Pinang (SPPP)** built with Next.js 14, React 18, and TypeScript.
 
-First, run the development server:
+## 🚀 Live Demo
+
+**Railway Deployment**: [Deploying Now - URL will be available shortly]
+
+## ✨ Features
+
+### 🏗️ Modern Architecture
+- **Next.js 14** with App Router and Server Components
+- **React 18** with latest features and optimizations  
+- **TypeScript** for type safety and better developer experience
+- **Tailwind CSS** for rapid, consistent styling
+
+### 🎨 Design System
+- **SPPP-branded** color palette and components
+- **Responsive design** optimized for all devices
+- **Accessibility-first** approach (WCAG 2.1 AA compliance ready)
+- **Component-based architecture** for maintainability
+
+### 🔍 Advanced Search
+- **Global search functionality** with intelligent suggestions
+- **Real-time search results** with highlighting
+- **Keyboard navigation support** (arrows, enter, escape)
+- **Categorized results** (pages, documents, services)
+
+### 🧭 Navigation System
+- **Mega menu navigation** with icons and descriptions
+- **Mobile-responsive hamburger menu** 
+- **Multi-level navigation** for complex content hierarchy
+- **Active state management** based on current route
+
+### 📊 Content Sections
+- **Hero section** with real-time port statistics
+- **Performance dashboard** with key metrics
+- **Services showcase** with detailed features
+- **Quick access links** for common functions
+- **News & announcements** with featured content
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose | Version |
+|------------|---------|---------|
+| **Next.js** | React Framework | 14.2.32 |
+| **React** | UI Library | ^18 |
+| **TypeScript** | Type Safety | ^5 |
+| **Tailwind CSS** | Styling | ^3.4.1 |
+| **Headless UI** | Accessible Components | ^2.2.7 |
+| **Heroicons** | Icon System | ^2.2.0 |
+| **Framer Motion** | Animations | ^12.23.12 |
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18.0.0 or higher
+- npm 8.0.0 or higher
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/LogendraRao/sppp-v2-website.git
+cd sppp-v2-website
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Create optimized production build
+npm run build
 
-## Learn More
+# Start production server
+npm start
 
-To learn more about Next.js, take a look at the following resources:
+# Run type checking
+npm run type-check
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Run linting
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎯 SPPP Requirements Compliance
 
-## Deploy on Vercel
+### ✅ Implemented Features
+- [x] **Modern React/Next.js Framework**
+- [x] **TypeScript for Type Safety**
+- [x] **Responsive Mobile-First Design**
+- [x] **Global Search Functionality**
+- [x] **Navigation System with Mega Menus**
+- [x] **Professional SPPP Branding**
+- [x] **SEO Optimized Pages**
+- [x] **Performance Optimized Build**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔜 Upcoming Features (Next Stages)
+- [ ] **Real-time Dashboard** with port operations data
+- [ ] **AI Chatbot** with multi-language support (BM/EN)
+- [ ] **Content Management System** for staff
+- [ ] **Progressive Web App** features
+- [ ] **Database Integration** with PostgreSQL
+- [ ] **Authentication System** for staff portal
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Deployment
+
+### Railway Deployment
+The application is configured for automatic deployment on Railway:
+
+1. **Automatic GitHub Integration** - Deploys on every push to main
+2. **Production Build** - Optimized static generation
+3. **Custom Domain Support** - Ready for sppp.gov.my integration
+4. **Environment Variables** - Configurable via Railway dashboard
+
+---
+
+**Built with ❤️ for SPPP by the Development Team**
