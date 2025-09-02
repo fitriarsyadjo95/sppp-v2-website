@@ -6,7 +6,7 @@ import {
   Truck, 
   Anchor, 
   Building, 
-  Waves, 
+ 
   Settings,
   MapPin,
   Clock,

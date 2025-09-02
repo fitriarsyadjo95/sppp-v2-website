@@ -6,7 +6,6 @@ import {
   User, 
   Eye, 
   ArrowRight,
-  Filter,
   Search,
   Tag,
   Clock,
