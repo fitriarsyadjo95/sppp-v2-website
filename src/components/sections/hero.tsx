@@ -4,8 +4,11 @@ import React from 'react'
 import Link from 'next/link'
 import { ChevronRightIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 import { Button } from '@/components/ui/button'
+import { useLanguage } from '@/contexts/language-context'
 
 export const Hero: React.FC = () => {
+  const { t } = useLanguage()
+  
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-sppp-dark-blue via-sppp-blue to-sppp-light-blue">
       {/* Background Pattern */}
@@ -22,17 +25,19 @@ export const Hero: React.FC = () => {
             <div className="text-white">
               <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-6">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse" />
-                Portal Terkini • Sistem Online 24/7
+                {t('hero-badge', 'Portal Terkini • Sistem Online 24/7', 'Latest Portal • 24/7 Online System')}
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-                Suruhanjaya Pelabuhan{' '}
-                <span className="text-sppp-accent">Pulau Pinang</span>
+                {t('hero-title', 'Suruhanjaya Pelabuhan', 'Port Commission')}{' '}
+                <span className="text-sppp-accent">{t('hero-location', 'Pulau Pinang', 'Penang')}</span>
               </h1>
 
               <p className="text-xl lg:text-2xl text-gray-100 mb-8 leading-relaxed">
-                Pintu masuk maritim utama Malaysia dengan perkhidmatan pelabuhan terdepan, 
-                latihan profesional dan teknologi canggih untuk kecemerlangan industri maritim.
+                {t('hero-description', 
+                  'Pintu masuk maritim utama Malaysia dengan perkhidmatan pelabuhan terdepan, latihan profesional dan teknologi canggih untuk kecemerlangan industri maritim.',
+                  'Malaysia\'s premier maritime gateway with leading port services, professional training and advanced technology for maritime industry excellence.'
+                )}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -40,7 +45,7 @@ export const Hero: React.FC = () => {
                   size="lg" 
                   className="bg-white text-sppp-blue hover:bg-gray-100 font-semibold"
                 >
-                  Perkhidmatan Online
+                  {t('online-services-btn', 'Perkhidmatan Online', 'Online Services')}
                   <ArrowRightIcon className="ml-2 h-5 w-5" />
                 </Button>
                 
@@ -50,7 +55,7 @@ export const Hero: React.FC = () => {
                     size="lg"
                     className="border-white text-white hover:bg-white hover:text-sppp-blue font-semibold"
                   >
-                    Ketahui Lebih Lanjut
+                    {t('learn-more-btn', 'Ketahui Lebih Lanjut', 'Learn More')}
                     <ChevronRightIcon className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>

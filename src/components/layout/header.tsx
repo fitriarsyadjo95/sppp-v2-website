@@ -6,9 +6,11 @@ import { PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/
 import { Button } from '@/components/ui/button'
 import { Navigation } from './navigation'
 import { GlobalSearch } from '../search/global-search'
+import { useLanguage } from '@/contexts/language-context'
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { language, setLanguage, t } = useLanguage()
 
   return (
     <header className="relative bg-white">
@@ -31,14 +33,28 @@ export const Header: React.FC = () => {
                 href="/staff-portal" 
                 className="text-xs bg-sppp-blue hover:bg-sppp-light-blue px-3 py-1 rounded transition-colors"
               >
-                Portal Staf
+                {t('staff-portal', 'Portal Staf', 'Staff Portal')}
               </Link>
               <div className="flex space-x-2">
-                <button className="text-xs hover:text-sppp-accent transition-colors">
+                <button 
+                  onClick={() => setLanguage('BM')}
+                  className={`text-xs transition-colors ${
+                    language === 'BM' 
+                      ? 'text-sppp-accent font-semibold' 
+                      : 'hover:text-sppp-accent'
+                  }`}
+                >
                   BM
                 </button>
                 <span className="text-xs">|</span>
-                <button className="text-xs hover:text-sppp-accent transition-colors">
+                <button 
+                  onClick={() => setLanguage('EN')}
+                  className={`text-xs transition-colors ${
+                    language === 'EN' 
+                      ? 'text-sppp-accent font-semibold' 
+                      : 'hover:text-sppp-accent'
+                  }`}
+                >
                   EN
                 </button>
               </div>
@@ -59,9 +75,11 @@ export const Header: React.FC = () => {
                 </div>
                 <div className="hidden sm:block">
                   <h1 className="text-xl font-bold text-sppp-dark-blue">
-                    Suruhanjaya Pelabuhan
+                    {t('header-title', 'Suruhanjaya Pelabuhan', 'Port Commission')}
                   </h1>
-                  <p className="text-sm text-sppp-gray">Pulau Pinang</p>
+                  <p className="text-sm text-sppp-gray">
+                    {t('header-subtitle', 'Pulau Pinang', 'Penang')}
+                  </p>
                 </div>
               </Link>
             </div>
@@ -73,12 +91,16 @@ export const Header: React.FC = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-6">
-              <Button variant="outline" size="sm">
-                Hubungi Kami
-              </Button>
-              <Button size="sm">
-                Perkhidmatan Online
-              </Button>
+              <Link href="/contact">
+                <Button variant="outline" size="sm">
+                  {t('contact-us', 'Hubungi Kami', 'Contact Us')}
+                </Button>
+              </Link>
+              <Link href="/services">
+                <Button size="sm">
+                  {t('online-services', 'Perkhidmatan Online', 'Online Services')}
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile menu button */}

@@ -4,6 +4,7 @@ import React from 'react'
 import { Header } from './header'
 import { Footer } from './footer'
 import { BaseComponentProps } from '@/types'
+import { LanguageProvider } from '@/contexts/language-context'
 
 interface LayoutProps extends BaseComponentProps {
   showHeader?: boolean
@@ -17,19 +18,21 @@ export const Layout: React.FC<LayoutProps> = ({
   children
 }) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <LanguageProvider>
+      <div className="min-h-screen flex flex-col">
 
-      {/* Header */}
-      {showHeader && <Header />}
+        {/* Header */}
+        {showHeader && <Header />}
 
-      {/* Main Content */}
-      <main className={`flex-1 ${className || ''}`}>
-        {children}
-      </main>
+        {/* Main Content */}
+        <main className={`flex-1 ${className || ''}`}>
+          {children}
+        </main>
 
-      {/* Footer */}
-      {showFooter && <Footer />}
-    </div>
+        {/* Footer */}
+        {showFooter && <Footer />}
+      </div>
+    </LanguageProvider>
   )
 }
 
