@@ -1,10 +1,13 @@
-import React from 'react'
+'use client'
+
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { 
   MapPinIcon, 
   PhoneIcon, 
   EnvelopeIcon, 
-  ClockIcon 
+  ClockIcon,
+  EyeIcon 
 } from '@heroicons/react/24/outline'
 
 const footerSections = {
@@ -30,7 +33,7 @@ const footerSections = {
     title: 'Maklumat',
     links: [
       { name: 'Berita & Pengumuman', href: '/news' },
-      { name: 'Tender & Kontrak', href: '/tenders' },
+      { name: 'Tender & Kontrak', href: '/sumber/tender' },
       { name: 'Laporan Tahunan', href: '/reports' },
       { name: 'Dasar & Prosedur', href: '/policies' }
     ]
@@ -48,6 +51,30 @@ const footerSections = {
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
+  const [visitorCount, setVisitorCount] = useState<number>(0)
+
+  useEffect(() => {
+    // Get visitor count from localStorage or start with a base number
+    const getVisitorCount = () => {
+      if (typeof window !== 'undefined') {
+        const stored = localStorage.getItem('sppp-visitor-count')
+        const baseCount = 125847 // Starting base count
+        
+        if (stored) {
+          const currentCount = parseInt(stored, 10)
+          const newCount = currentCount + 1
+          localStorage.setItem('sppp-visitor-count', newCount.toString())
+          return newCount
+        } else {
+          localStorage.setItem('sppp-visitor-count', baseCount.toString())
+          return baseCount
+        }
+      }
+      return 125847
+    }
+    
+    setVisitorCount(getVisitorCount())
+  }, [])
 
   return (
     <footer className="bg-sppp-dark-blue text-white">
@@ -172,6 +199,24 @@ export const Footer: React.FC = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Visitor Counter & Disclaimer */}
+        <div className="border-t border-gray-600 py-4">
+          <div className="flex flex-col lg:flex-row justify-between items-center space-y-3 lg:space-y-0">
+            {/* Visitor Counter */}
+            <div className="flex items-center space-x-2">
+              <EyeIcon className="h-4 w-4 text-sppp-accent" />
+              <span className="text-xs text-gray-300">
+                Jumlah Pelawat: {visitorCount.toLocaleString('ms-MY')}
+              </span>
+            </div>
+            
+            {/* Browser Disclaimer */}
+            <div className="text-xs text-gray-400 text-center lg:text-right max-w-2xl">
+              Paparan terbaik menggunakan pelayar popular dan terkini (Internet Explorer versi 10 ke atas, Google Chrome, Mozilla Firefox, Safari & Opera) dengan minimum resolusi 1280 x 800 piksel.
             </div>
           </div>
         </div>

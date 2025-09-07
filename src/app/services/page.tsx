@@ -1,6 +1,5 @@
 import React from 'react'
 import { Metadata } from 'next'
-import { Layout } from '@/components/layout/layout'
 import { Services } from '@/components/sections/services'
 
 export const metadata: Metadata = {
@@ -10,7 +9,8 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <Layout>
+    <>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-sppp-dark-blue to-sppp-blue py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -28,6 +28,6 @@ export default function ServicesPage() {
 
       {/* Services Section */}
       <Services />
-    </Layout>
+        </>
   )
 }

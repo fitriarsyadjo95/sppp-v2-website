@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { Layout } from '@/components/layout/layout';
 import { 
   Newspaper, 
   Calendar, 
@@ -258,7 +257,8 @@ export default function NewsPage() {
   const trending = newsArticles.sort((a, b) => b.views - a.views).slice(0, 5);
 
   return (
-    <Layout>
+    <>
+
       <div className="min-h-screen bg-gray-50">
         {/* Header Section */}
         <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white">
@@ -540,6 +540,6 @@ export default function NewsPage() {
           </div>
         </div>
       </div>
-    </Layout>
+        </>
   );
 }

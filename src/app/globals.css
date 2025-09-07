@@ -25,3 +25,103 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Accessibility Features */
+
+/* Font Size Classes */
+html.text-normal {
+  font-size: 16px;
+}
+
+html.text-large {
+  font-size: 18px;
+}
+
+html.text-extra-large {
+  font-size: 20px;
+}
+
+/* Contrast Classes */
+html.contrast-high {
+  filter: contrast(150%);
+}
+
+html.contrast-invert {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Reduce Motion */
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Remove Focus Outlines */
+html.no-focus-outlines *:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Underline Links */
+html.underline-links a {
+  text-decoration: underline !important;
+}
+
+/* Readable Font */
+html.readable-font * {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.05em !important;
+  line-height: 1.6 !important;
+}
+
+/* High Contrast Enhancements */
+html.contrast-high {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+html.contrast-high body {
+  background: #000000;
+  color: #ffffff;
+}
+
+html.contrast-high button {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+html.contrast-high a {
+  color: #00ffff !important;
+}
+
+/* Focus indicators for better accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: 6px;
+}

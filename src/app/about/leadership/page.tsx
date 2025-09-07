@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { Layout } from '@/components/layout/layout';
 import { Users, Award, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -91,7 +90,8 @@ export default function LeadershipPage() {
   const managementTeam = leadershipData.filter(leader => leader.category === 'management');
 
   return (
-    <Layout>
+    <>
+
       <div className="min-h-screen bg-gray-50">
         {/* Header Section */}
         <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white">
@@ -257,6 +257,6 @@ export default function LeadershipPage() {
           </section>
         </div>
       </div>
-    </Layout>
+        </>
   );
 }

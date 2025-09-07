@@ -1,0 +1,110 @@
+{
+  "timestamp": "2025-01-06",
+  "baseUrl": "https://www.penangport.gov.my",
+  "menuStructure": [
+    {
+      "name": "Profil",
+      "href": "/profil",
+      "subItems": [
+        {
+          "name": "Latar Belakang",
+          "subItems": [
+            { "name": "SPPP", "href": "/profil/latar-belakang/sppp" },
+            { "name": "Teluk Ewa", "href": "/profil/latar-belakang/teluk-ewa" }
+          ]
+        },
+        { "name": "Visi & Misi", "href": "/profil/visi-misi" },
+        { "name": "Peranan Suruhanjaya Pelabuhan", "href": "/profil/peranan" },
+        {
+          "name": "Infrastruktur & Jalinan Perhubungan",
+          "subItems": [
+            { "name": "SPPP", "href": "/profil/infrastruktur/sppp" },
+            { "name": "Teluk Ewa", "href": "/profil/infrastruktur/teluk-ewa" }
+          ]
+        },
+        { "name": "Sijil & Penghargaan", "href": "/profil/sijil-penghargaan" },
+        { "name": "Carta Organisasi", "href": "/profil/carta-organisasi" },
+        {
+          "name": "Organisasi",
+          "subItems": [
+            {
+              "name": "Lembaga Pengarah",
+              "subItems": [
+                { "name": "SPPP", "href": "/profil/organisasi/lembaga-pengarah/sppp" },
+                { "name": "Teluk Ewa", "href": "/profil/organisasi/lembaga-pengarah/teluk-ewa" }
+              ]
+            },
+            { "name": "Ketua Pegawai Maklumat", "href": "/profil/organisasi/cio" },
+            { "name": "Ketua-Ketua Jabatan", "href": "/profil/organisasi/ketua-jabatan" },
+            { "name": "Direktori", "href": "/profil/organisasi/direktori" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kemudahan & Perkhidmatan",
+      "href": "/kemudahan",
+      "subItems": [
+        { "name": "Zon Bebas Komersil", "href": "/kemudahan/zon-bebas" },
+        { "name": "Pengkalan Kontena Butterworth Utara", "href": "/kemudahan/kontena-butterworth" },
+        { "name": "Dermaga Air Dalam Butterworth", "href": "/kemudahan/dermaga-butterworth" },
+        { "name": "Pengkalan Kargo Pukal Prai", "href": "/kemudahan/kargo-prai" },
+        { "name": "Terminal Pelayaran Antarabangsa Swettenham Pier", "href": "/kemudahan/swettenham-pier" },
+        { "name": "Perkhidmatan Feri", "href": "/kemudahan/perkhidmatan-feri" },
+        { "name": "Jeti Minyak Sayur", "href": "/kemudahan/jeti-minyak" },
+        { "name": "Perkhidmatan Bantuan", "href": "/kemudahan/perkhidmatan-bantuan" },
+        { "name": "Penang Port Crafts", "href": "/kemudahan/port-crafts" },
+        { "name": "Bunkering", "href": "/kemudahan/bunkering" },
+        { "name": "Dermaga Prai", "href": "/kemudahan/dermaga-prai" }
+      ]
+    },
+    {
+      "name": "Pemasangan Pelabuhan",
+      "href": "/pemasangan",
+      "subItems": [
+        { "name": "Pelabuhan Penang", "href": "/pemasangan/pelabuhan-penang" },
+        { "name": "Jeti Teluk Ewa", "href": "/pemasangan/jeti-teluk-ewa" }
+      ]
+    },
+    {
+      "name": "Sumber",
+      "href": "/sumber",
+      "subItems": [
+        { "name": "Tender & Sebut Harga", "href": "/sumber/tender" },
+        { "name": "Galeri Media", "href": "/sumber/galeri-media" },
+        { "name": "Penerbitan", "href": "/sumber/penerbitan" },
+        { "name": "Arkib Elektronik", "href": "/sumber/arkib" },
+        { "name": "e-Penyertaan", "href": "/sumber/e-penyertaan" }
+      ]
+    },
+    {
+      "name": "Hubungi Kami",
+      "href": "/hubungi",
+      "subItems": [
+        { "name": "Lokasi", "href": "/hubungi/lokasi" },
+        { "name": "Maklum Balas", "href": "/hubungi/maklum-balas" },
+        { "name": "Kajian Kepuasan Pelanggan", "href": "/hubungi/kajian-kepuasan" },
+        { "name": "Kerjaya", "href": "/hubungi/kerjaya" },
+        { "name": "Soalan Lazim", "href": "/hubungi/faq" },
+        { "name": "Pelancongan Maritim", "href": "/hubungi/pelancongan" },
+        { "name": "Permohonan Maklumat", "href": "/hubungi/permohonan-maklumat" }
+      ]
+    }
+  ],
+  "externalPortals": [
+    {
+      "name": "Sistem Maklum Balas",
+      "url": "https://www.ppcapps.gov.my/efeedback/",
+      "description": "Portal untuk menghantar maklum balas, aduan, pujian, pertanyaan"
+    },
+    {
+      "name": "Kajian Kepuasan Pelanggan",
+      "url": "https://www.ppcft.gov.my/kajiankepuasan.php",
+      "description": "Borang kajian kepuasan pelanggan dalam talian"
+    }
+  ],
+  "languages": [
+    { "code": "ms", "name": "Bahasa Melayu", "path": "/ms/" },
+    { "code": "en", "name": "English", "path": "/en-GB/" }
+  ]
+}

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Metadata } from 'next'
-import { Layout } from '@/components/layout/layout'
 import { Hero } from '@/components/sections/hero'
 import { Stats } from '@/components/sections/stats'
 import { Services } from '@/components/sections/services'
@@ -15,12 +14,12 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <Hero />
       <Stats />
       <Services />
       <QuickLinks />
       <News />
-    </Layout>
+    </>
   )
 }

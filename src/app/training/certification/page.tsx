@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { Layout } from '@/components/layout/layout';
 import { FileText, Award, CheckCircle, Clock, Users, Star, Download, ExternalLink } from 'lucide-react';
 
 interface Certification {
@@ -315,7 +314,8 @@ export default function CertificationAccreditationPage() {
   };
 
   return (
-    <Layout>
+    <>
+
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
@@ -618,6 +618,6 @@ export default function CertificationAccreditationPage() {
           )}
         </div>
       </div>
-    </Layout>
+        </>
   );
 }

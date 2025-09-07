@@ -2,15 +2,17 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { PhoneIcon, EnvelopeIcon, Bars3Icon, XMarkIcon, AdjustmentsHorizontalIcon } from '@heroicons/react/24/outline'
 import { Button } from '@/components/ui/button'
 import { Navigation } from './navigation'
 import { GlobalSearch } from '../search/global-search'
 import { useLanguage } from '@/contexts/language-context'
+import { useAccessibility } from '@/contexts/accessibility-context'
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
+  const { dispatch } = useAccessibility()
 
   return (
     <header className="relative bg-white">
@@ -35,6 +37,23 @@ export const Header: React.FC = () => {
               >
                 {t('staff-portal', 'Portal Staf', 'Staff Portal')}
               </Link>
+              
+              {/* Accessibility Button */}
+              <button
+                onClick={() => dispatch({ type: 'TOGGLE_MENU' })}
+                className="text-xs hover:text-sppp-accent transition-colors p-1 rounded hover:bg-white/10"
+                title={t('accessibility-menu', 'Menu Aksesibiliti', 'Accessibility Menu')}
+                aria-label="Open accessibility menu"
+              >
+                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                  <circle cx="12" cy="4" r="2"/>
+                  <path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01H13c-.35-.2-.75-.3-1.19-.26C10.76 7.11 10 8.04 10 9.09V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.07 3.25 1.94 5 1.95zm-6.17 5c-.41 1.16-.46 2.48-.3 3.67.14 1.05.4 2.06.8 3H15v-2h-2.17z"/>
+                  <circle cx="17.5" cy="19.5" r="1.5"/>
+                  <circle cx="5.5" cy="19.5" r="1.5"/>
+                  <path d="M5.5 16c-.83 0-1.5.67-1.5 1.5v0c0 .83.67 1.5 1.5 1.5h12c.83 0 1.5-.67 1.5-1.5v0c0-.83-.67-1.5-1.5-1.5H5.5z"/>
+                </svg>
+              </button>
+              
               <div className="flex space-x-2">
                 <button 
                   onClick={() => setLanguage('BM')}

@@ -5,6 +5,11 @@ import { Header } from './header'
 import { Footer } from './footer'
 import { BaseComponentProps } from '@/types'
 import { LanguageProvider } from '@/contexts/language-context'
+import { AccessibilityProvider } from '@/contexts/accessibility-context'
+import { ChatBotProvider } from '@/components/chatbot/ChatBotProvider'
+import { FloatingChatWidget } from '@/components/chatbot/FloatingChatWidget'
+import { ChatInterface } from '@/components/chatbot/ChatInterface'
+import { AccessibilityMenu } from '@/components/accessibility/AccessibilityMenu'
 
 interface LayoutProps extends BaseComponentProps {
   showHeader?: boolean
@@ -19,19 +24,30 @@ export const Layout: React.FC<LayoutProps> = ({
 }) => {
   return (
     <LanguageProvider>
-      <div className="min-h-screen flex flex-col">
+      <AccessibilityProvider>
+        <ChatBotProvider>
+          <div className="min-h-screen flex flex-col">
 
-        {/* Header */}
-        {showHeader && <Header />}
+            {/* Header */}
+            {showHeader && <Header />}
 
-        {/* Main Content */}
-        <main className={`flex-1 ${className || ''}`}>
-          {children}
-        </main>
+            {/* Main Content */}
+            <main className={`flex-1 ${className || ''}`}>
+              {children}
+            </main>
 
-        {/* Footer */}
-        {showFooter && <Footer />}
-      </div>
+            {/* Footer */}
+            {showFooter && <Footer />}
+
+            {/* Chatbot Components */}
+            <FloatingChatWidget />
+            <ChatInterface />
+            
+            {/* Accessibility Menu */}
+            <AccessibilityMenu />
+          </div>
+        </ChatBotProvider>
+      </AccessibilityProvider>
     </LanguageProvider>
   )
 }

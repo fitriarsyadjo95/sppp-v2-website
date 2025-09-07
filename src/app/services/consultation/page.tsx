@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { Layout } from '@/components/layout/layout';
 import { 
   Users, 
   FileText, 
@@ -219,7 +218,8 @@ export default function ConsultationPage() {
   const categories = Object.keys(categoryNames) as (keyof typeof categoryNames)[];
 
   return (
-    <Layout>
+    <>
+
       <div className="min-h-screen bg-gray-50">
         {/* Header Section */}
         <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white">
@@ -493,6 +493,6 @@ export default function ConsultationPage() {
           </section>
         </div>
       </div>
-    </Layout>
+        </>
   );
 }

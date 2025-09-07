@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { Layout } from '@/components/layout/layout';
 import { 
   MapPin, 
   Phone, 
@@ -121,7 +120,8 @@ const emergencyContacts = [
 
 export default function ContactPage() {
   return (
-    <Layout>
+    <>
+
       <div className="min-h-screen bg-gray-50">
         {/* Header Section */}
         <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white">
@@ -306,7 +306,7 @@ export default function ContactPage() {
                     <input
                       type="text"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Masukkan nama penuh anda"
                     />
                   </div>
@@ -317,7 +317,7 @@ export default function ContactPage() {
                     <input
                       type="email"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="nama@contoh.com"
                     />
                   </div>
@@ -330,7 +330,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="tel"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="+60 12-345 6789"
                     />
                   </div>
@@ -338,7 +338,7 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Jabatan Berkenaan
                     </label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                       <option value="">Pilih jabatan</option>
                       <option value="general">Pertanyaan Am</option>
                       <option value="operations">Operasi Pelabuhan</option>
@@ -356,7 +356,7 @@ export default function ContactPage() {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tajuk mesej anda"
                   />
                 </div>
@@ -368,7 +368,7 @@ export default function ContactPage() {
                   <textarea
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tulis mesej anda di sini..."
                   ></textarea>
                 </div>
@@ -455,6 +455,6 @@ export default function ContactPage() {
           </section>
         </div>
       </div>
-    </Layout>
+        </>
   );
 }

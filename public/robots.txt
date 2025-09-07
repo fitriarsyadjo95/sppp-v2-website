@@ -1,0 +1,32 @@
+# robots.txt for SPPP Website
+
+User-agent: *
+Allow: /
+
+# Block admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Block search and filter parameters
+Disallow: /*?*search*
+Disallow: /*?*filter*
+
+# Block duplicate content
+Disallow: /*?*sort*
+Disallow: /*?*page*
+
+# Allow important pages
+Allow: /profil/
+Allow: /kemudahan/
+Allow: /training/
+Allow: /services/
+Allow: /news/
+Allow: /hubungi/
+
+# Sitemap location
+Sitemap: https://www.penangport.gov.my/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
